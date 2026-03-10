@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+ int valid_triangle(int a, int b, int c)
+{
+    if (a+b<c || a+c<b || b+c<a)
+    {
+        printf("Nem haromszog!");
+    }   
+    else 
+    {
+       printf("Haromszog!");
+    }
+}
+
+int main()
+{
+    int a,b,c;
+    printf("Add meg a háromszög oldalainak hosszát!");
+    scanf("%d %d %d", &a,&b,&c);
+    valid_triangle(a,b,c);
+    return 0;
+}
