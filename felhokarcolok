@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h> 
+
+int kulonbseg(int n, int tomb[]) {
+    int osszeg = 0;
+    for (int i = 0; i < n - 1; i++) {
+        int kulonbsegek = abs(tomb[i+1] - tomb[i]); 
+        osszeg += kulonbsegek;
+    }
+    return osszeg;
+}
+
+int main() {
+   
+    int tomb[] = {2, 4, 8, 3, 9, 7, 1};
+    int meret = 7;
+    
+    int eredmeny = kulonbseg(meret, tomb);
+    printf("A szomszedok magassagkulonbsegenek osszege: %d\n", kulonbseg(meret,tomb));
+
+    return 0;
+}
