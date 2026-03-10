@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void kiir(int n, int tomb[]) {
+    if (n > 0) {
+        printf("%d", tomb[0]);
+        for (int i = 1; i < n; i++) {
+            printf(", %d", tomb[i]);
+        }
+    }
+    printf("\n");
+}
+
+void pozitv_hozzaallas(int n, int tomb[]) {
+    for (int i = 0; i < n; i++) {
+        if (tomb[i] < 0) {
+            tomb[i] = -tomb[i]; 
+        }
+    }
+}
+
+int main() {
+    int adatok[] = {2, -8, 1, -4, 9, -12, 0};
+    int meret = 7;
+
+    printf("Eredeti tomb: ");
+    kiir(meret, adatok);
+    pozitv_hozzaallas(meret, adatok);
+
+    printf("Modositott tomb: ");
+    kiir(meret, adatok);
+
+    return 0;
+}
