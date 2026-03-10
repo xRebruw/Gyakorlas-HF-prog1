@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void kiir(int n, int tomb[]) {
+    if (n > 0) {
+        printf("%d", tomb[0]);
+        
+        for (int i = 1; i < n; i++) {
+            printf(", %d", tomb[i]); 
+        }
+    }
+    printf("\n"); 
+}
+int main() {
+    int tomb[]={2,8,1,4,9,4,2};
+    int meret = 7;
+    kiir(meret, tomb);
+}
