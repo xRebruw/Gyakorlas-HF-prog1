@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int rendezes(int n, int tomb[]) {
+    if(n<=1) {
+    return 1;
+    }
+for(int i=0; i < n - 1; i++) {
+    if (tomb[i] > tomb[i+1]) {
+    return 0;
+    }
+}
+return 1;
+}
+
+int main()
+{
+    int rendezett[] = {2, 4, 7, 7, 10};
+    int nem_rendezett[] = {3, 7, 6, 2, 10};
+    int meret = 5;
+    printf("Az elso tomb rendezett? %s\n", rendezes(meret, rendezett) ? "Igen" : "Nem");
+    printf("A masodik tomb rendezett? %s\n", rendezes(meret, nem_rendezett) ? "Igen" : "Nem");
+
+    return 0;
+}
