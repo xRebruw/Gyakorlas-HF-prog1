@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    int ketto = 'x' - 'v';
+    int nulla = 'x' - 'x';
+    int hat   = 'x' - 'r';
+
+    printf("%d%d%d%d\n", ketto,nulla,ketto,hat);
+    return 0;
+}
