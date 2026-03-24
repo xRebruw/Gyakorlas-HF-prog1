@@ -1,0 +1,26 @@
+#include <stdio.h>
+#define SIZE 26
+
+void feltolt(char tomb[])
+{
+    for( int i = 0 ; i<SIZE ; i++ )
+    {
+        tomb[i] = 'a' + i;
+    }
+}
+
+int main()
+{
+    char abece[SIZE];
+
+    puts("Az angol abece");
+
+    feltolt(abece);
+
+    printf("%s ", abece);
+
+    puts(" ");
+    
+   
+ return 0;
+}
