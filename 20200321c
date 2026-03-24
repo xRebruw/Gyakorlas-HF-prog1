@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+
+int main()
+{
+
+
+    int szam1;
+    int szam2;
+
+
+    if(scanf("%d %d",&szam1,&szam2) != 2)
+    {
+        printf("Hiba! Ket parametert (szamot) kell megadni.");
+    }
+    else
+    {
+        (printf("%d",szam1+szam2));
+    }
+
+return 0;
+}
